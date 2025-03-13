@@ -23,13 +23,16 @@ img {
 
 .menuItem {
    text-align: center;
-   
+   padding-left: 20px;
+   padding-right: 20px;
     height: 310px;
-    width: 200px;
+    width: 250px;
     box-shadow: 0 0 5px grey;
     border-radius: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
+
+
 
 .descreteContainer {
    display: flex;
@@ -62,12 +65,21 @@ img {
 .blue{
     color: #00008b;
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 .pageTitle {
     color: #00008b;
     font-size: 20px;
     font-weight: bold;
+    padding-left: 50px;
+}
+
+.menuTitle {
+    padding-left: 50px;
+    
+
 }
 
 #overview {
@@ -77,4 +89,38 @@ img {
 
 #remove {
     margin-top: 60px;
+}
+
+.menuItem:hover {
+    background-color: lightgray;
+}
+
+.button:hover {
+   
+    color: grey;
+}
+
+.image1Div {
+    border: solid;
+    border-width: 0.1px;
+    width: 200px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 0px 10px
+}
+
+.image1 {
+    padding-bottom: 10px;
+}
+
+.menuText {
+    text-align: left;
+    padding-left: 20px;
+  
+}
+
+.menuPictures {
+   padding-top: 20px;
 }
