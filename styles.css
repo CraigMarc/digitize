@@ -46,10 +46,6 @@ img {
     flex-wrap: wrap;
 }
 
-.buttonContainer {
-    display: flex;
-    gap: 20px;
-}
 
 
 .productName {
@@ -89,8 +85,11 @@ img {
     border-left: solid;
     border-width: 0.2px;
     border-radius: 10px 10px 0px 0px;
-    border-color: black;
+    border-color: red;
     color: #00008b;
+   
+    
+   
 }
 
 #remove {
@@ -143,9 +142,56 @@ img {
     border: solid;
     border-width: 0.1px;
     border-radius: 0px 10px 0px 10px;
+  position: relative;
+  
+ 
 }
+
+.buttonContainer {
+   
+  
+  width: 300px;
+ position: relative;
+    
+}
+
 
 .tabText {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+#overview {
+    border-top: solid;
+    border-right: solid;
+    border-left: solid;
+    border-width: 0.2px;
+    border-radius: 10px 10px 0px 0px;
+    border-color: black;
+    color: #00008b;
+    top: -19px;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+}
+
+#features {
+   top: -19px;
+   left: 80px;
+    z-index: 10;
+    background-color: white;
+    position: absolute;
+    border-bottom: solid;
+    border-width: 0.1px;
+}
+
+#specifications {
+    top: -19px;
+    left: 150px;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    border-bottom: solid;
+    border-width: 0.1px;
 }
