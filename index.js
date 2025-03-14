@@ -50,9 +50,11 @@ function menu() {
         const menuDescr = document.createElement('p');
         menuDescr.textContent = descriptText
         menuDescr.id = menuText
+        menuDescr.classList.add('menuText');
 
         const descreteContainer = document.createElement('div');
         descreteContainer.classList.add('descreteContainer');
+        descreteContainer.id = menuText
 
         const menuDiv1 = document.createElement('div');
         const disText = document.createElement('div');
@@ -93,9 +95,9 @@ function menu() {
         menu1.appendChild(descreteContainer)
 
     }
-    createMenuItem('prod1', 'description', '64', '16', '8')
-    createMenuItem('prod2', 'description', '32', '8', '8')
-    createMenuItem('prod3', 'description', '20', '6', '4')
+    createMenuItem('NetGuardian 864 G6', 'This is what the product basically does. This is a common use case.', '64', '16', '8')
+    createMenuItem('NetGuardian 832 G6', 'This is what the product basically does. This is a common use case.', '32', '8', '8')
+    createMenuItem('NetGuardian 420 G6', 'This is what the product basically does. This is a common use case.', '20', '6', '4')
 
 
     removeDiv.appendChild(h3);
@@ -122,6 +124,8 @@ select.forEach((button) => {
     button.addEventListener('click', update)
 })
 
+
+
 // update to product page
 
 function update(e) {
@@ -129,31 +133,31 @@ function update(e) {
     const homeClick = document.getElementById("home")
     const menuClick = document.getElementById("menu")
     const locationClick = document.getElementById("location")
-    
+
     const remove = document.getElementById("remove");
 
-    if (e.target.id == 'prod1') {
+    if (e.target.id == 'NetGuardian 864 G6') {
 
-       remove.remove()
-        product('product1', "description of the product")
+        remove.remove()
+        product('NetGuardian 864 G6', "description of the product")
         productTab('overview')
         selectItem()
     }
 
-    if (e.target.id == 'prod2') {
+    if (e.target.id == 'NetGuardian 832 G6') {
 
         remove.remove()
-        product('product2', "description of the product")
+        product('NetGuardian 832 G6', "description of the product")
         productTab('overview')
         selectItem()
     }
 
-    if (e.target.id == 'prod3') {
+    if (e.target.id == 'NetGuardian 420 G6') {
 
         remove.remove()
-        product('product3', "description of the product")
+        product('NetGuardian 420 G6', "description of the product")
         productTab('overview')
-       
+
         selectItem()
     }
 
@@ -169,35 +173,78 @@ function updateProduct(e) {
     //const remove = document.getElementById("remove");
 
     if (e.target.id == 'overview') {
-        overviewClick.style.color = '#00008b'; 
-        featuresClick.style.color = 'black'; 
-        specClick.style.color = 'black'; 
-        overviewClick.style.borderBottom = 'solid'; 
-        featuresClick.style.borderBottom = 'none'; 
-        specClick.style.borderBottom = 'none'; 
+        overviewClick.style.color = '#00008b';
+        featuresClick.style.color = 'black';
+        specClick.style.color = 'black';
+        overviewClick.style.borderTop = 'solid';
+        overviewClick.style.borderRight = 'solid';
+        overviewClick.style.borderLeft = 'solid';
+        overviewClick.style.borderRadius = '10px 10px 0px 0px';
+        overviewClick.style.borderWidth = '0.2px';
+        overviewClick.style.borderBottom = 'none';
+        overviewClick.style.borderColor = 'black';
+        featuresClick.style.borderLeft = 'none';
+        featuresClick.style.borderRight = 'none';
+        featuresClick.style.borderTop = 'none';
+        featuresClick.style.borderBottom = 'solid';
+        featuresClick.style.borderWidth = '0.1px';
+        specClick.style.borderTop = 'none';
+        specClick.style.borderLeft = 'none';
+        specClick.style.borderRight = 'none';
+        specClick.style.borderBottom = 'solid'
+        specClick.style.borderWidth = '0.1px'
         remove2.remove()
         productTab('overview')
 
     }
 
     if (e.target.id == 'features') {
-        overviewClick.style.color = 'black'; 
-        featuresClick.style.color = '#00008b'; 
-        specClick.style.color = 'black'; 
-        overviewClick.style.borderBottom = 'none'; 
-        featuresClick.style.borderBottom = 'solid'; 
-        specClick.style.borderBottom = 'none'; 
+        overviewClick.style.color = 'black';
+        featuresClick.style.color = '#00008b';
+        specClick.style.color = 'black';
+        featuresClick.style.borderBottom = 'solid';
+        featuresClick.style.borderTop = 'solid';
+        featuresClick.style.borderRight = 'solid';
+        featuresClick.style.borderLeft = 'solid';
+        featuresClick.style.borderRadius = '10px 10px 0px 0px';
+        featuresClick.style.borderWidth = '0.2px';
+        featuresClick.style.borderColor = 'black';
+        featuresClick.style.borderBottom = 'none';
+        specClick.style.borderTop = 'none';
+        specClick.style.borderLeft = 'none';
+        specClick.style.borderRight = 'none';
+        specClick.style.borderBottom = 'solid'
+        specClick.style.borderWidth = '0.1px'
+        overviewClick.style.borderTop = 'none';
+        overviewClick.style.borderLeft = 'none';
+        overviewClick.style.borderRight = 'none'
+        overviewClick.style.borderBottom = 'solid'
+        overviewClick.style.borderWidth = '0.1px'
         remove2.remove()
         productTab('features')
     }
 
     if (e.target.id == 'specifications') {
-        overviewClick.style.color = 'black'; 
-        featuresClick.style.color = 'black'; 
+        overviewClick.style.color = 'black';
+        featuresClick.style.color = 'black';
         specClick.style.color = '#00008b'
-        overviewClick.style.borderBottom = 'none'; 
-        featuresClick.style.borderBottom = 'none'; 
-        specClick.style.borderBottom = 'solid'; 
+        overviewClick.style.borderTop = 'none';
+        overviewClick.style.borderLeft = 'none';
+        overviewClick.style.borderRight = 'none'
+        overviewClick.style.borderBottom = 'solid'
+        overviewClick.style.borderWidth = '0.1px'
+        featuresClick.style.borderLeft = 'none';
+        featuresClick.style.borderRight = 'none';
+        featuresClick.style.borderTop = 'none';
+        featuresClick.style.borderBottom = 'solid';
+        featuresClick.style.borderWidth = '0.1px';
+        specClick.style.borderTop = 'solid';
+        specClick.style.borderRight = 'solid';
+        specClick.style.borderLeft = 'solid';
+        specClick.style.borderRadius = '10px 10px 0px 0px';
+        specClick.style.borderWidth = '0.2px';
+        specClick.style.borderColor = 'black';
+        specClick.style.borderBottom = 'none';
         remove2.remove()
         productTab('specs')
     }
@@ -243,10 +290,12 @@ function product(title, description) {
     headerDiv3.id = 'specifications';
 
 
-
+    const image1Div = document.createElement('div');
     const image1 = document.createElement('img');
     image1.src = 'img.avif';
     image1.classList.add('image1');
+    image1Div.classList.add('image1Div');
+    image1Div.appendChild(image1)
 
     div1.appendChild(h3);
     //div1.appendChild(h4);
@@ -254,7 +303,8 @@ function product(title, description) {
     buttonDiv.appendChild(headerDiv2)
     buttonDiv.appendChild(headerDiv3)
     rightDiv.appendChild(buttonDiv)
-    productDiv.appendChild(image1)
+    //productDiv.appendChild(image1)
+    productDiv.appendChild(image1Div)
     productDiv.appendChild(rightDiv)
 
 
@@ -268,9 +318,13 @@ function product(title, description) {
 
 function productTab(title) {
     const buttons = document.getElementById("right")
-    const removeDiv = document.createElement('p');
-    removeDiv.textContent = title + " text will be here"
+    const removeDiv = document.createElement('div');
+    const text = document.createElement('p');
+    text.textContent = title + " text will be here"
     removeDiv.id = 'remove2';
+    removeDiv.classList.add('tabTextDiv');
+    text.classList.add('tabText');
+    removeDiv.appendChild(text)
 
     return buttons.appendChild(removeDiv)
 
