@@ -83,7 +83,12 @@ img {
 }
 
 #overview {
-    border-bottom: solid;
+    border-top: solid;
+    border-right: solid;
+    border-left: solid;
+    border-width: 0.2px;
+    border-radius: 10px 10px 0px 0px;
+    border-color: black;
     color: #00008b;
 }
 
@@ -98,6 +103,12 @@ img {
 .button:hover {
    
     color: grey;
+}
+
+.button {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .image1Div {
