@@ -43,6 +43,7 @@ img {
 .productContainer {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .buttonContainer {
@@ -134,4 +135,17 @@ img {
 
 .menuPictures {
    padding-top: 20px;
+}
+
+.tabTextDiv {
+    height: 300px;
+    width: 300px;
+    border: solid;
+    border-width: 0.1px;
+    border-radius: 0px 10px 0px 10px;
+}
+
+.tabText {
+    margin-left: 5px;
+    margin-right: 5px;
 }
